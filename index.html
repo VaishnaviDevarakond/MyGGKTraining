@@ -5,14 +5,40 @@
     <title>Calendar</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css">  -->
+
+          <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <style>
         /* #abc {
     display:none;
     } */
 
+    .date-from-to{
+        float : left
+    }
+
+    .main-first {
+    flex: 2;
+  }
+  
+  .main-second {
+      display: none;
+      flex: 1;
+  }
+
+  .main-flex{
+      display: flex;
+  }
 
     .modal {
   display: none; /* Hidden by default */
@@ -23,7 +49,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -48,9 +74,9 @@
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  height: 90%;
-  
+  width: 60%;
+  height: 65%;
+    
 }
 
 /* Modal Content */
@@ -63,6 +89,7 @@
   width: 100%;
   height: 100%;
   flex: 2;
+  overflow: auto;
 }
 
 .modal-content-second {
@@ -71,11 +98,12 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  overflow: auto;
 }
 
 .modal-content{
   background-color: #fefefe;
-  margin: auto;
+  margin: fixed;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -95,14 +123,26 @@
   text-decoration: none;
   cursor: pointer;
 }
-    </style>
 
+table#calendar td {
+  height:70px;
+  
+}
+</style>
 </head>
 <body>
 <div class="container mt-5">
-    <div class="card">
-        <h3 class="card-header" id="monthAndYear"></h3>
-        <table class="table table-bordered table-responsive-sm" id="calendar">
+    <div class="main-flex">
+    <div class="card main-first">
+        <div class = ".bg-dark">
+            <div class = ".bg-dark" style= "display: flex;">
+                <h3 class="card-header" style= "flex: 2" id="monthAndYear"></h3>
+                <div class = "card-header" style="padding: 20px 20px 20px 20px;">
+                    <button class="btn btn-outline-primary btn-sm" style= "flex: 1" id="globaladdevent" onclick="openPopup()"> + Add Event</button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-responsive-sm" style="table-layout:fixed;" id="calendar">
             <thead>
             <tr>
                 <th>Monday</th>
@@ -189,6 +229,10 @@
             <option value=2030>2030</option>
         </select></form>
     </div>
+    <div id="eventdisplay" class= "card main-second">
+        <h1>"hey"</h1>
+    </div>
+</div>
 </div>
 
 <!-- <div id="abc">
@@ -210,27 +254,29 @@
     <!-- Modal content -->
  <div class="modal-content-first">
     <h2><span class="badge badge-secondary">Add An Event</span></h2>
-    <div class="form-group">
+    <div class="form-group" >
         <label for="title">Title</label>
         <input type="text" class="form-control form-control-sm" id="title" name="title">
     </div> 
-    <div class="form-group">
-        <label for="date">Date</label>
-        <input type="text" class="form-control form-control-sm" id="date" name="date">
-    </div>
-    <div class="form-group">
-      <label for="from">From:</label>
-      <input type="time" class="form-control form-control-sm"id="from" name="from">
-    </div>
-    <div class="form-group">
-      <label for="to">TO:</label>
-      <input type="time" class="form-control form-control-sm" id="to" name="to">
+    <div style= "display: flex;"> 
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control form-control-sm" id="date" name="date">
+        </div>
+        <div class="form-group">
+        <label for="from">From:</label>
+        <input type="time" class="form-control form-control-sm"id="from" name="from">
+        </div>
+        <div class="form-group">
+        <label for="to">TO:</label>
+        <input type="time" class="form-control form-control-sm" id="to" name="to">
+        </div>
     </div>
     <div class="form-group">
       <label for="desc">Enter Description</label>
       <textarea id="desc" class="form-control form-control-sm" name="description" placeholder="description"></textarea>
     </div>
-    <button id ="popupsubmit" class="btn btn-secondary">create</button>
+    <button id ="popupsubmit" class="btn btn-secondary">Create</button>
  </div>
     <div class="modal-content-second">
         <h2><span class="badge badge-secondary">Add Attendees</span></h2>
@@ -240,7 +286,9 @@
             </ul>
         </div>
         <div class="form-group">
+            <div class="ui-widget">
             <input type="text" class="form-control form-control-sm" id="attend" name="attend">
+            </div>
             <br>
             <button id ="addattendees" class="btn btn-outline-secondary">submit</button>
         </div>
@@ -263,23 +311,25 @@
         <label for="title">Title</label>
         <input type="text" class="form-control form-control-sm" id="utitle" name="title">
     </div> 
-    <div class="form-group">
-        <label for="date">Date</label>
-        <input type="text" class="form-control form-control-sm" id="udate" name="date">
-    </div>
-    <div class="form-group">
-      <label for="from">From:</label>
-      <input type="time" class="form-control form-control-sm"id="ufrom" name="from">
-    </div>
-    <div class="form-group">
-      <label for="to">TO:</label>
-      <input type="time" class="form-control form-control-sm" id="uto" name="to">
+    <div style= "display: flex;"> 
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control form-control-sm" id="udate" name="date">
+        </div>
+        <div class="form-group">
+        <label for="from">From:</label>
+        <input type="time" class="form-control form-control-sm"id="ufrom" name="from">
+        </div>
+        <div class="form-group">
+        <label for="to">TO:</label>
+        <input type="time" class="form-control form-control-sm" id="uto" name="to">
+        </div>
     </div>
     <div class="form-group">
       <label for="desc">Enter Description</label>
       <textarea id="udesc" class="form-control form-control-sm" name="description" placeholder="description"></textarea>
     </div>
-    <button id ="updatepopupsubmit" class="btn btn-secondary">update</button>
+    <button id ="updatepopupsubmit" class="btn btn-secondary">Update</button>
  </div>
     <div class="modal-content-second">
         <h2><span class="badge badge-secondary">Add Attendees</span></h2>
@@ -323,13 +373,16 @@
 
 
 
-<script src="scripts.js"></script>
+
+
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
+
 
 <!-- Optional JavaScript for bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
         integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
@@ -340,5 +393,13 @@
  
 <script  src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
 
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+
+<script src="scripts.js"></script>
 </body>
 </html>

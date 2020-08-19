@@ -1,0 +1,22 @@
+{   "events": [
+        {
+        "date": "2020-08-12",
+        "title" : "milestone stand upppppppppppppppppppppppppppppppppp",
+        "from" : "08:00",
+        "to":"09:00",
+        "description": "standup",
+        "attendees":["vaish", "sai"]
+        },
+
+        {
+            "date": "2020-08-12",
+            "title" : "L&D Meeting",
+            "from" : "08:00",
+            "to":"09:00",
+            "description": "standup",
+            "attendees":["vaish", "sai"]
+            }
+    ],
+
+    "users" : ["vaishnavi","sai","Aman","Vasudevan","Chandra"]
+}

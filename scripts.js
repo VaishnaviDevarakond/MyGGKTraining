@@ -4,7 +4,9 @@ currentYear = today.getFullYear();
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+//
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var id = 1;
 // var events = [ 
 //     {
@@ -18,17 +20,31 @@ var id = 1;
 
 // ];
 
+var users = ["vaishnavi","sai","Aman","Vasudevan","Chandra"];
+
 var events = new Map();
 events.set(id, 
      {
     'id' : id,
-    'date' : new Date(2020,7,12),
-    'title' : "milestone stand up",
+    'date' :"2020-08-12",
+    'title' : "milestone stand upppppppppppppppppppppppppppppppppp",
     'from' : "08:00",
     'to':"09:00",
     'description': "standup",
     'attendees':["vaish", "sai"]
     }
+)
+
+events.set(++id, 
+    {
+   'id' : id,
+   'date' : "2020-08-13",
+   'title' : "milestone stand up",
+   'from' : "08:00",
+   'to':"09:00",
+   'description': "standup",
+   'attendees':["vaish", "sai"]
+   }
 )
 
 events.set(++id, 
@@ -46,7 +62,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,3),
+   'date' :"2020-08-03",
    'title' : "milestone stand up",
    'from' : "08:00",
    'to':"09:00",
@@ -58,7 +74,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,4),
+   'date' : "2020-08-04",
    'title' : "milestone stand up",
    'from' : "08:00",
    'to':"09:00",
@@ -70,7 +86,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,5),
+   'date' : "2020-08-05",
    'title' : "milestone stand up",
    'from' : "08:00",
    'to':"09:00",
@@ -82,7 +98,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,6),
+   'date' :"2020-08-06",
    'title' : "milestone stand up",
    'from' : "08:00",
    'to':"09:00",
@@ -94,7 +110,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,7),
+   'date' : "2020-08-07",
    'title' : "milestone stand up",
    'from' : "08:00",
    'to':"09:00",
@@ -106,7 +122,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,7),
+   'date' : "2020-08-07",
    'title' : "L&D Session",
    'from' : "10:00",
    'to':"11:00",
@@ -118,7 +134,7 @@ events.set(++id,
 events.set(++id, 
     {
    'id' : id,
-   'date' : new Date(2020,7,7),
+   'date' : "2020-08-07",
    'title' : "Team Meeting",
    'from' : "09:00",
    'to':"10:00",
@@ -127,8 +143,88 @@ events.set(++id,
    }
 )
 
+//var events = new Map();
+// events.set(2, 
+//     {
+//    'id' : 2,
+//    'date' : "2020-08-07",
+//    'title' : "Team Meeting",
+//    'from' : "09:00",
+//    'to':"10:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+// const fetchEvents = async () => {
+//     try {
+//         const res = await fetch('http://localhost:3000/events/');
+//         if (!res.ok) {
+//             throw new Error(res.status);
+//         }
+//         const data = await res.json();
+//         console.log(data);
+//         data.forEach(r=>{
+//             let temp = r;
+//             console.log(r);
+//             events.set(r.id, temp);
+//         });
+//        console.log(events);
+//        showCalendar(currentMonth, currentYear);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// fetchEvents();
+
+// const options = {
+//     method: 'POST',
+//     body: JSON.stringify(user),
+//     headers: {
+//         'Content-Type': 'application/json'
+//     }
+// }
+
+
+// const postEvents = async () => {
+//     try {
+//         const res = await fetch('http://localhost:3000/events/',options);
+//         if (!res.ok) {
+//             throw new Error(res.status);
+//         }
+//         const data = await res.json();
+//         console.log(data);
+//         data.forEach(r=>{
+//             let temp = r;
+//             console.log(r);
+//             events.set(r.id, temp);
+//         });
+//        console.log(events);
+//        showCalendar(currentMonth, currentYear);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// fetch('http://localhost:3000/events/', options)
+//     .then(res => res.json())
+//     .then(res => console.log(res));
+
+// fetch('http://localhost:3000/events/')
+//     .then(res => res.json())
+//     .then(res => {
+//         res.forEach(r=>{
+//             let temp = r;
+//             console.log(r);
+//             events.set(r.id, temp);
+//         });
+//         });
+    
+// console.log(events)
+// console.log(Array.from(events.values()));
+// console.log(events.values())
 monthAndYear = document.getElementById("monthAndYear");
-showCalendar(currentMonth, currentYear);
+ showCalendar(currentMonth, currentYear);
 
 
 function next() {
@@ -148,6 +244,66 @@ function jump() {
     currentMonth = parseInt(selectMonth.value);
     showCalendar(currentMonth, currentYear);
 }
+ function  displayEventPopUp(filteredEvent,e){
+        
+    document.getElementById("myModal1").style.display = "block";
+    let event = filteredEvent.find(obj => obj.id == e.target.id);
+    console.log(event);
+    document.getElementById("utitle").value = event.title;
+    document.getElementById("udate").value = event.date;
+    document.getElementById("ufrom").value =event.from;
+    document.getElementById("uto").value = event.to;
+    document.getElementById("udesc").value = event.description;
+    let parentlist = document.getElementById("uatendeslist");
+    parentlist.innerHTML = "";
+    for(let i=0;i<event.attendees.length;i++){
+        let li = document.createElement("li");
+        li.className = "ist-group-item d-flex justify-content-between align-items-center";
+        li.appendChild(document.createTextNode(event.attendees[i]));
+        li.style = "cursor:pointer";
+        let span = document.createElement("SPAN");
+        span.innerText = "\u00D7";
+      //  var txt = document.createTextNode("\u00D7");
+        span.className = "badge badge-primary badge-pill";
+        span.style = "cursor:pointer";
+        span.id = "closelistitem";
+        span.addEventListener('click',closeListItem.bind(this,parentlist));
+       // span.appendChild(txt);
+        li.appendChild(span);
+        parentlist.appendChild(li);
+    }
+    document.getElementById("updatepopupsubmit").onclick = (e)=>{
+            let updatedEvent = {};
+            updatedEvent.title = document.getElementById("utitle").value;
+            updatedEvent.from = document.getElementById("ufrom").value;
+            updatedEvent.to = document.getElementById("uto").value;
+            updatedEvent.description = document.getElementById("udesc").value;
+            updatedEvent.date = document.getElementById("udate").value;
+            updatedEvent.id = event.id;
+            let childNodes = parentlist.childNodes;
+            let attendees = [];
+            for(let i=0; i< childNodes.length; i++){
+                let str = childNodes[i].innerText
+                if(str){
+                attendees.push(str.substring(0, str.length-2));
+                }
+           }
+    updatedEvent.attendees = attendees;
+    console.log(updatedEvent);
+    console.log(event);
+        if(!_.isEqual(updatedEvent, event)){
+            events.set(event.id, updatedEvent);
+            document.getElementById("myModal1").style.display = "none";
+            showCalendar(currentMonth, currentYear);
+        }
+        else{
+            alert("Edit required fields to update");
+        document.getElementById("myModal1").style.display = "none";
+        }
+        }
+        e.stopPropagation();
+        
+    }
 
 function showCalendar(month, year) {
 
@@ -162,64 +318,10 @@ function showCalendar(month, year) {
     monthAndYear.innerHTML = months[month] + " " + year;
     selectYear.value = year;
     selectMonth.value = month;
-    var displayEventPopUp  = function(filteredEvent,e){
-        
-        document.getElementById("myModal1").style.display = "block";
-        let event = filteredEvent.find(obj => obj.id == e.target.id);
-        console.log(event);
-        document.getElementById("utitle").value = event.title;
-        document.getElementById("udate").value = event.date;
-        document.getElementById("ufrom").value =event.from;
-        document.getElementById("uto").value = event.to;
-        document.getElementById("udesc").value = event.description;
-        let parentlist = document.getElementById("uatendeslist");
-        parentlist.innerHTML = "";
-        for(let i=0;i<event.attendees.length;i++){
-            var li = document.createElement("li");
-            li.className = "ist-group-item d-flex justify-content-between align-items-center";
-            li.appendChild(document.createTextNode(event.attendees[i]));
-            var span = document.createElement("SPAN");
-            span.innerText = "\u00D7";
-          //  var txt = document.createTextNode("\u00D7");
-            span.className = "badge badge-primary badge-pill";
-            span.id = "closelistitem";
-            span.addEventListener('click',closeListItem.bind(this,parentlist));
-           // span.appendChild(txt);
-            li.appendChild(span);
-            parentlist.appendChild(li);
-        }
-        document.getElementById("updatepopupsubmit").onclick = ()=>{
-
-                let updatedEvent = {};
-                updatedEvent.title = document.getElementById("utitle").value;
-                updatedEvent.from = document.getElementById("ufrom").value;
-                updatedEvent.to = document.getElementById("uto").value;
-                updatedEvent.description = document.getElementById("udesc").value;
-                updatedEvent.date = document.getElementById("date").value;
-                updatedEvent.id = event.id;
-                let childNodes = parentlist.childNodes;
-                let attendees = [];
-                for(let i=0; i< childNodes.length; i++){
-                    let str = childNodes[i].innerText
-                    if(str){
-                    attendees.push(str.substring(0, str.length-2));
-                    }
-               }
-        updatedEvent.attendees = attendees;
-            if(!_.isEqual(updatedEvent, event)){
-                events.set(event.id, updatedEvent);
-                document.getElementById("myModal1").style.display = "none";
-                showCalendar(currentMonth, currentYear);
-            }
-            else{
-                alert("Edit required fields to update");
-            document.getElementById("myModal1").style.display = "none";
-            }
-            }
-            
-        }
     // creating all cells
     let date = 1;
+    let daysinMonth = daysInMonth(month, year);
+    let tempDaysInMonths = daysinMonth;
     for (let i = 0; i < 6; i++) {
         // creates a table row
         let row = document.createElement("tr");
@@ -254,24 +356,69 @@ function showCalendar(month, year) {
                     cell.classList.add("bg-info");
                 } // color today's date
                 cell.appendChild(cellText);
+                cell.id = date;
+                //cell.addEventListener('click',eventDisplay, true);
                 row.appendChild(cell);
                 cell.appendChild(button);
-                var filteredEvent =Array.from(events.values()).filter(event => event.date.toString() == (new Date(year, month, date).toString()));
-                console.log(filteredEvent);
+                // console.log(events);
+                // console.log(year+"-0"+(month+1)+"-"+"-0"+date);
+                 let formatedDate;
+                 if(date<10 && month<9){
+                    formatedDate = year+"-0"+(month+1)+"-"+"0"+date;
+                 }
+                 else if(date>10 && month<9){
+                    formatedDate = year+"-0"+(month+1)+"-"+date;
+                 }
+                 console.log(formatedDate)
+                var filteredEvent =Array.from(events.values()).filter(event => event.date == formatedDate);
+                cell.addEventListener('click',eventDisplay.bind(this,filteredEvent));
                 if(filteredEvent.length>1)
                 filteredEvent.sort(function (a, b) {
                     return a.from.localeCompare(b.from);
                 })
-               console.log(filteredEvent)
+              // console.log(filteredEvent)
+                // if(filteredEvent.length>0){
+                //     for(let i=0; i<filteredEvent.length;i++){
+                //     var label = document.createElement("SPAN"); 
+                //     label.className = "badge badge-primary";
+                //     label.id = filteredEvent[i].id;
+                //     label.innerText = filteredEvent[i].title;
+                //    // label.style = ":hover"
+                //     label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
+                //     cell.appendChild(label);
+                //     }
+                // }
+
                 if(filteredEvent.length>0){
-                    for(let i=0; i<filteredEvent.length;i++){
-                    var label = document.createElement("SPAN"); 
-                    label.className = "badge badge-pill badge-primary";
-                    label.id = filteredEvent[i].id;
-                    label.innerText = filteredEvent[i].title;
-                   // label.style = ":hover"
-                    label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
-                    cell.appendChild(label);
+                    if(filteredEvent.length==1){
+                        let label = document.createElement("SPAN"); 
+                        label.className = "badge badge-primary";
+                        label.id = filteredEvent[0].id;
+                        label.innerText = filteredEvent[0].title;
+                        label.style = "cursor:pointer;width: 100%";
+                    // label.style = ":hover"
+                        label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
+                        cell.appendChild(label);
+                    }
+                    else{
+                        let label = document.createElement("SPAN"); 
+                        label.className = "badge badge-primary";
+                        label.id = filteredEvent[0].id;
+                        label.innerText = filteredEvent[0].title;
+                        label.style = "cursor:pointer; width: 100%";
+                    // label.style = ":hover"
+                        label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
+                        cell.appendChild(label);
+
+                        var dotlabel = document.createElement("SPAN"); 
+                        dotlabel.className = "badge badge-primary";
+                        dotlabel.style = "cursor:pointer";
+                        dotlabel.id = "dot"
+                        dotlabel.innerText = "...";
+                    // label.style = ":hover"
+                    dotlabel.addEventListener('click', eventDisplay.bind(this, filteredEvent));
+                        cell.appendChild(dotlabel);
+
                     }
                 }
    
@@ -291,9 +438,18 @@ function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
-function openPopup(){
+function openPopup(e){
 document.getElementById("myModal").style.display = "block";
-document.getElementById("date").value = new Date(currentYear, currentMonth, this.id);
+let formatedDate;
+if(this.id<10 && currentMonth<9){
+   formatedDate = currentYear+"-0"+(currentMonth+1)+"-"+"0"+this.id;
+}
+else if(this.id>10 && currentMonth<9){
+   formatedDate = currentYear+"-0"+(currentMonth+1)+"-"+this.id;
+}
+document.getElementById("date").value = formatedDate;
+//new Date(currentYear, currentMonth, this.id);
+e.stopPropagation();
 }
 
 var span = document.getElementsByClassName("close")[0];
@@ -302,9 +458,56 @@ span.onclick = function() {
   }
 document.getElementById("popupsubmit").addEventListener('click', submitevent);
 let parentlist =  document.getElementById("atendeslist");
+$( function() { 
+    $( "#attend" ).autocomplete({ 
+      source: users   
+    }); 
+  } ); 
 document.getElementById("addattendees").addEventListener('click', addAttendees.bind(this,parentlist,"attend"));
 document.getElementById("uaddattendees").addEventListener('click', addAttendees.bind(this,document.getElementById("uatendeslist"),"uattend"));
+//document.getElementById("ed").addEventListener('click', eventDisplay);
+function eventDisplay(filteredEvent,e){
+    var displaydiv = document.getElementById("eventdisplay")
+    displaydiv.style.display = "block";
+    displaydiv.innerHTML = "";
+    if(filteredEvent.length>1)
+                filteredEvent.sort(function (a, b) {
+                    return a.from.localeCompare(b.from);
+                })
+              // console.log(filteredEvent)
+                if(filteredEvent.length>0){
+                    for(let i=0; i<filteredEvent.length;i++){
+                        let maindiv1 = document.createElement("DIV");
+                        maindiv1.className = "card";
+                    let maindiv = document.createElement("DIV");
+                    maindiv.style = "display:flex";
+                   
+                    //maindiv.className = "bg-secondary text-white";
+                    let subdiv1 = document.createElement("DIV");
+                    subdiv1.style = "flex:1";
+                    let h2 = document.createElement("h5");
+                    h2.className="text-secondary";
+                    h2.innerText = filteredEvent[i].from;
+                    subdiv1.append(h2);
+                    maindiv.append(subdiv1);
+                    let subdiv2 = document.createElement("DIV");
+                    subdiv2.style = "flex:2";
+                    let label = document.createElement("SPAN"); 
+                    label.className = "badge badge-secondary";
+                    label.style = "cursor:pointer;width: 100%";
+                    label.id = filteredEvent[i].id;
+                    label.innerText = filteredEvent[i].title;
+                    subdiv2.append(label)
+                    maindiv.append(subdiv2);
 
+                    maindiv1.append(maindiv);
+                  
+                   // label.style = ":hover"
+                    label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
+                   displaydiv.appendChild(maindiv1);
+                }
+                }
+}
 function submitevent(){
     let event={};
     let attendees = []; 
@@ -314,6 +517,11 @@ function submitevent(){
     event.to = document.getElementById("to").value;
     event.description = document.getElementById("desc").value;
     event.date = document.getElementById("date").value;
+    // let date = document.getElementById("date").value;
+    //     let tempDate = date.split("-")
+    //     console.log(tempDate)
+    //     event.date= new Date(tempDate[0], tempDate[1]-1, tempDate[2])
+         console.log(event.date);
     event.id = tempid;
     parentlist =  document.getElementById("atendeslist");
     let childNodes = parentlist.childNodes;
@@ -326,10 +534,11 @@ function submitevent(){
     event.attendees = attendees;
     events.set(tempid,event);
     document.getElementById("myModal").style.display = "none";
+    console.log(event);
     showCalendar(currentMonth, currentYear);
 }
 
-
+//C:\Users\vaishnavi.devarakond\Calender
 function addAttendees(parentlist,attend){
    var li = document.createElement("li");
    li.className = "ist-group-item d-flex justify-content-between align-items-center";
