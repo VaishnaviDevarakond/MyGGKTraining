@@ -22,131 +22,118 @@ var id = 1;
 
 var users = ["vaishnavi","sai","Aman","Vasudevan","Chandra"];
 
-var events = new Map();
-events.set(id, 
-     {
-    'id' : id,
-    'date' :"2020-08-12",
-    'title' : "milestone stand upppppppppppppppppppppppppppppppppp",
-    'from' : "08:00",
-    'to':"09:00",
-    'description': "standup",
-    'attendees':["vaish", "sai"]
-    }
-)
+// var events = new Map();
+// events.set(id, 
+//      {
+//     'id' : id,
+//     'date' :"2020-08-12",
+//     'title' : "milestone stand upppppppppppppppppppppppppppppppppp",
+//     'from' : "08:00",
+//     'to':"09:00",
+//     'description': "standup",
+//     'attendees':["vaish", "sai"]
+//     }
+// )
 
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-13",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : new Date(2020,7,13),
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' :"2020-08-03",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-04",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-05",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' :"2020-08-06",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-07",
-   'title' : "milestone stand up",
-   'from' : "08:00",
-   'to':"09:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-07",
-   'title' : "L&D Session",
-   'from' : "10:00",
-   'to':"11:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-events.set(++id, 
-    {
-   'id' : id,
-   'date' : "2020-08-07",
-   'title' : "Team Meeting",
-   'from' : "09:00",
-   'to':"10:00",
-   'description': "standup",
-   'attendees':["vaish", "sai"]
-   }
-)
-
-//var events = new Map();
-// events.set(2, 
+// events.set(++id, 
 //     {
-//    'id' : 2,
+//    'id' : id,
+//    'date' : "2020-08-13",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' : new Date(2020,7,13),
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' :"2020-08-03",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' : "2020-08-04",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' : "2020-08-05",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' :"2020-08-06",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' : "2020-08-07",
+//    'title' : "milestone stand up",
+//    'from' : "08:00",
+//    'to':"09:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
+//    'date' : "2020-08-07",
+//    'title' : "L&D Session",
+//    'from' : "10:00",
+//    'to':"11:00",
+//    'description': "standup",
+//    'attendees':["vaish", "sai"]
+//    }
+// )
+
+// events.set(++id, 
+//     {
+//    'id' : id,
 //    'date' : "2020-08-07",
 //    'title' : "Team Meeting",
 //    'from' : "09:00",
@@ -155,56 +142,52 @@ events.set(++id,
 //    'attendees':["vaish", "sai"]
 //    }
 // )
-// const fetchEvents = async () => {
-//     try {
-//         const res = await fetch('http://localhost:3000/events/');
-//         if (!res.ok) {
-//             throw new Error(res.status);
-//         }
-//         const data = await res.json();
-//         console.log(data);
-//         data.forEach(r=>{
-//             let temp = r;
-//             console.log(r);
-//             events.set(r.id, temp);
-//         });
-//        console.log(events);
-//        showCalendar(currentMonth, currentYear);
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
 
-// fetchEvents();
+var events = [];
+const fetchEvents = async () => {
+    try {
+        const res = await fetch('http://localhost:3000/events/');
+        if (!res.ok) {
+            throw new Error(res.status);
+        }
+        events= await res.json();
+    //     console.log(data);
+    //     data.forEach(r=>{
+    //         let temp = r;
+    //         console.log(r);
+    //         events.set(r.id, temp);
+    //     });
+    //    console.log(events);
+    //events = data;
+       showCalendar(currentMonth, currentYear);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// const options = {
-//     method: 'POST',
-//     body: JSON.stringify(user),
-//     headers: {
-//         'Content-Type': 'application/json'
-//     }
-// }
+fetchEvents();
 
+const postEvents = async (options) => {
+    try {
+        const res = await fetch('http://localhost:3000/events/',options);
+        events =await res.json();
+       // fetchEvents();
+        showCalendar(currentMonth, currentYear);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// const postEvents = async () => {
-//     try {
-//         const res = await fetch('http://localhost:3000/events/',options);
-//         if (!res.ok) {
-//             throw new Error(res.status);
-//         }
-//         const data = await res.json();
-//         console.log(data);
-//         data.forEach(r=>{
-//             let temp = r;
-//             console.log(r);
-//             events.set(r.id, temp);
-//         });
-//        console.log(events);
-//        showCalendar(currentMonth, currentYear);
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+const putEvents = async (options,id) => {
+    try {
+        let res = await fetch(`http://localhost:3000/events/${id}`,options);
+        //fetchEvents();
+        events =await res.json();
+        showCalendar(currentMonth, currentYear);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 // fetch('http://localhost:3000/events/', options)
 //     .then(res => res.json())
@@ -292,9 +275,17 @@ function jump() {
     console.log(updatedEvent);
     console.log(event);
         if(!_.isEqual(updatedEvent, event)){
-            events.set(event.id, updatedEvent);
+           // events.set(event.id, updatedEvent);
+           console.log("inside if")
+           const options = {
+            method: 'PUT',
+            body: JSON.stringify(updatedEvent),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+            putEvents(options,event.id)
             document.getElementById("myModal1").style.display = "none";
-            showCalendar(currentMonth, currentYear);
         }
         else{
             alert("Edit required fields to update");
@@ -308,7 +299,7 @@ function jump() {
 function showCalendar(month, year) {
 
     let firstDay = (new Date(year, month)).getDay();
-    console.log(firstDay);
+   // console.log(firstDay);
     tbl = document.getElementById("calendar-body"); // body of the calendar
 
     // clearing all previous cells
@@ -340,6 +331,7 @@ function showCalendar(month, year) {
 
             if (i === 0 && j < firstDay-1) {
                 cell = document.createElement("td");
+                cell.style = "background-color: rgb(250 249 248);";
                 cellText = document.createTextNode("");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
@@ -353,8 +345,14 @@ function showCalendar(month, year) {
                 
                 cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
+                    //cell.classList.add("bg-dark");
+                    //cell.className("bg-dark")
+                    cell.style = "background-color: rgb(222 236 249)"
                 } // color today's date
+
+                if(date<today.getDate()&& year === today.getFullYear() && month === today.getMonth()){
+                    cell.style = "background-color: rgb(250 249 248);";
+                }
                 cell.appendChild(cellText);
                 cell.id = date;
                 //cell.addEventListener('click',eventDisplay, true);
@@ -366,11 +364,17 @@ function showCalendar(month, year) {
                  if(date<10 && month<9){
                     formatedDate = year+"-0"+(month+1)+"-"+"0"+date;
                  }
-                 else if(date>10 && month<9){
+                 else if(date<10 && month==9){
+                    formatedDate = year+"-"+(month+1)+"-"+"0"+date;
+                 }
+                 if(date>=10 && month==9){
+                    formatedDate = year+"-"+(month+1)+"-"+date;
+                 }
+                 else if(date>=10 && month<9){
                     formatedDate = year+"-0"+(month+1)+"-"+date;
                  }
-                 console.log(formatedDate)
-                var filteredEvent =Array.from(events.values()).filter(event => event.date == formatedDate);
+               //  console.log(formatedDate)
+                var filteredEvent =events.filter(event => event.date == formatedDate);
                 cell.addEventListener('click',eventDisplay.bind(this,filteredEvent));
                 if(filteredEvent.length>1)
                 filteredEvent.sort(function (a, b) {
@@ -396,7 +400,24 @@ function showCalendar(month, year) {
                         label.id = filteredEvent[0].id;
                         label.innerText = filteredEvent[0].title;
                         label.style = "cursor:pointer;width: 100%";
-                    // label.style = ":hover"
+                        label.setAttribute("data-toggle","tooltip");
+                        label.setAttribute("title",filteredEvent[0].from);
+                        label.addEventListener('mouseover', ()=>{
+                            $(document).ready(function(){
+                            //$('#'+label.id).tooltip();
+                            $('[data-toggle="tooltip"]').tooltip(); 
+                            }  
+                          )})
+                        
+                        
+                      
+                       // label.addEventListener('mouseover',)
+
+                        // let tooltip = document.createElement("SPAN"); 
+                        // tooltip.className = "tooltiptext";
+                        // tooltip.innerText = filteredEvent[i].from;
+                        //label.appendChild(tooltip);
+
                         label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
                         cell.appendChild(label);
                     }
@@ -406,8 +427,15 @@ function showCalendar(month, year) {
                         label.id = filteredEvent[0].id;
                         label.innerText = filteredEvent[0].title;
                         label.style = "cursor:pointer; width: 100%";
-                    // label.style = ":hover"
                         label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
+                        label.setAttribute("data-toggle","tooltip");
+                        label.setAttribute("title",filteredEvent[0].from);
+                        label.addEventListener('mouseover', ()=>{
+                            $(document).ready(function(){
+                            //$('#'+label.id).tooltip();
+                            $('[data-toggle="tooltip"]').tooltip(); 
+                            }  
+                          )})
                         cell.appendChild(label);
 
                         var dotlabel = document.createElement("SPAN"); 
@@ -415,8 +443,7 @@ function showCalendar(month, year) {
                         dotlabel.style = "cursor:pointer";
                         dotlabel.id = "dot"
                         dotlabel.innerText = "...";
-                    // label.style = ":hover"
-                    dotlabel.addEventListener('click', eventDisplay.bind(this, filteredEvent));
+                        dotlabel.addEventListener('click', eventDisplay.bind(this, filteredEvent));
                         cell.appendChild(dotlabel);
 
                     }
@@ -444,9 +471,15 @@ let formatedDate;
 if(this.id<10 && currentMonth<9){
    formatedDate = currentYear+"-0"+(currentMonth+1)+"-"+"0"+this.id;
 }
-else if(this.id>10 && currentMonth<9){
+else if(this.id>=10 && currentMonth<9){
    formatedDate = currentYear+"-0"+(currentMonth+1)+"-"+this.id;
 }
+else if(date<10 && month==9){
+    formatedDate = year+"-"+(month+1)+"-"+"0"+date;
+ }
+ else if(date>=10 && month==9){
+    formatedDate = year+"-"+(month+1)+"-"+date;
+ }
 document.getElementById("date").value = formatedDate;
 //new Date(currentYear, currentMonth, this.id);
 e.stopPropagation();
@@ -467,8 +500,9 @@ document.getElementById("addattendees").addEventListener('click', addAttendees.b
 document.getElementById("uaddattendees").addEventListener('click', addAttendees.bind(this,document.getElementById("uatendeslist"),"uattend"));
 //document.getElementById("ed").addEventListener('click', eventDisplay);
 function eventDisplay(filteredEvent,e){
-    var displaydiv = document.getElementById("eventdisplay")
-    displaydiv.style.display = "block";
+    let div = document.getElementById("eventdisplay")
+    div.style.display = "block";
+    let displaydiv =  document.getElementById("insidediv");
     displaydiv.innerHTML = "";
     if(filteredEvent.length>1)
                 filteredEvent.sort(function (a, b) {
@@ -476,6 +510,8 @@ function eventDisplay(filteredEvent,e){
                 })
               // console.log(filteredEvent)
                 if(filteredEvent.length>0){
+                    
+                    document.getElementById("dayanddate").innerText = new Date(filteredEvent[0].date).toDateString();
                     for(let i=0; i<filteredEvent.length;i++){
                         let maindiv1 = document.createElement("DIV");
                         maindiv1.className = "card";
@@ -486,17 +522,25 @@ function eventDisplay(filteredEvent,e){
                     let subdiv1 = document.createElement("DIV");
                     subdiv1.style = "flex:1";
                     let h2 = document.createElement("h5");
-                    h2.className="text-secondary";
-                    h2.innerText = filteredEvent[i].from;
+                    h2.className="text-dark";
+                    h2.innerText = 
+                    `Start:${filteredEvent[i].from}`;
+                   // Duration: 30 mins;
+                    h2.style = "padding:10%";
                     subdiv1.append(h2);
                     maindiv.append(subdiv1);
                     let subdiv2 = document.createElement("DIV");
                     subdiv2.style = "flex:2";
                     let label = document.createElement("SPAN"); 
-                    label.className = "badge badge-secondary";
-                    label.style = "cursor:pointer;width: 100%";
+                    label.className = "badge badge-light";
+                    label.style = "cursor:pointer;width:100%; padding:5%";
                     label.id = filteredEvent[i].id;
-                    label.innerText = filteredEvent[i].title;
+                    label.innerText =
+                    `${filteredEvent[i].title}
+                     ${filteredEvent[i].description} ` ;
+                   // label.appendChild(document.createElement("BR"));
+                   // label.innerText = filteredEvent[i].description;
+
                     subdiv2.append(label)
                     maindiv.append(subdiv2);
 
@@ -506,12 +550,35 @@ function eventDisplay(filteredEvent,e){
                     label.addEventListener('click', displayEventPopUp.bind(this, filteredEvent));
                    displaydiv.appendChild(maindiv1);
                 }
+                div.append(displaydiv);
+                }
+                else{
+                      let img = document.createElement("IMG");
+                      img.src = "./calender.jpg" ;
+                      img.style = "position: absolute; top: 50%; left: 70%; width: 50%; height: 50%;  margin-top: -250px; margin-left: -250px;"
+                      
+                      
+                      /* Half the height */
+                      
+                      // width:30%; height:40%;"
+                      displaydiv.appendChild(img);
+
+                      let h2 = document.createElement("h5");
+                      h2.className="text-warning";
+                      h2.innerText = "Hurray! No events today";
+                      h2.style = "position: absolute; top: 50%; left: 70%; width: 50%; height: 50%;  margin-top: -250px; margin-left: -250px;"
+
+                      displaydiv.appendChild(h2)
+
+                      //div.appendChild(displaydiv);
+                    //<img src="C:\Users\vaishnavi.devarakond\Desktop\calender.jpg" alt="HTML5 Icon" style="width:128px;height:128px;"></img>
+                    document.getElementById("dayanddate").innerText = new Date(currentYear, currentMonth, e.target.id).toDateString();
                 }
 }
 function submitevent(){
     let event={};
     let attendees = []; 
-    let tempid = ++id;
+    //let tempid = ++id;
     event.title = document.getElementById("title").value;
     event.from = document.getElementById("from").value;
     event.to = document.getElementById("to").value;
@@ -522,7 +589,7 @@ function submitevent(){
     //     console.log(tempDate)
     //     event.date= new Date(tempDate[0], tempDate[1]-1, tempDate[2])
          console.log(event.date);
-    event.id = tempid;
+   // event.id = tempid;
     parentlist =  document.getElementById("atendeslist");
     let childNodes = parentlist.childNodes;
     for(let i=0; i< childNodes.length; i++){
@@ -532,10 +599,19 @@ function submitevent(){
        }
     }
     event.attendees = attendees;
-    events.set(tempid,event);
-    document.getElementById("myModal").style.display = "none";
-    console.log(event);
-    showCalendar(currentMonth, currentYear);
+    //events.set(tempid,event);
+
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(event),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    postEvents(options);
+    // document.getElementById("myModal").style.display = "none";
+    // console.log(event);
+    // showCalendar(currentMonth, currentYear);
 }
 
 //C:\Users\vaishnavi.devarakond\Calender

@@ -125,24 +125,25 @@
 }
 
 table#calendar td {
-  height:70px;
+  height:80px;
   
 }
 </style>
 </head>
 <body>
-<div class="container mt-5">
+<!-- <div class="container mt-5"> -->
     <div class="main-flex">
     <div class="card main-first">
         <div class = ".bg-dark">
             <div class = ".bg-dark" style= "display: flex;">
                 <h3 class="card-header" style= "flex: 2" id="monthAndYear"></h3>
-                <div class = "card-header" style="padding: 20px 20px 20px 20px;">
+                <div class = "card-header" style="padding: 20px;">
                     <button class="btn btn-outline-primary btn-sm" style= "flex: 1" id="globaladdevent" onclick="openPopup()"> + Add Event</button>
                 </div>
             </div>
         </div>
-        <table class="table table-bordered table-responsive-sm" style="table-layout:fixed;" id="calendar">
+        <table class="table table-bordered table-responsive-sm" style="table-layout:fixed; border-collapse: separate;
+        " id="calendar">
             <thead>
             <tr>
                 <th>Monday</th>
@@ -229,11 +230,18 @@ table#calendar td {
             <option value=2030>2030</option>
         </select></form>
     </div>
-    <div id="eventdisplay" class= "card main-second">
-        <h1>"hey"</h1>
+    <div  id=eventdisplay class= "card main-second">
+      <div>
+        <!-- <h3 class="card-header">Events for the Day</h3> -->
+        <div class = "card-header" style="padding: 15px;">
+          <h3 id = "dayanddate"></h3></div>
+      </div>
+      <div id=insidediv>
+        <!-- <img src="./calender.jpg" alt="HTML5 Icon" style="width:30%; height:60%;"></img> -->
+      </div>
     </div>
 </div>
-</div>
+<!-- </div> -->
 
 <!-- <div id="abc">
     <div id="popupContact">

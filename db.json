@@ -1,22 +1,153 @@
-{   "events": [
-        {
-        "date": "2020-08-12",
-        "title" : "milestone stand upppppppppppppppppppppppppppppppppp",
-        "from" : "08:00",
-        "to":"09:00",
-        "description": "standup",
-        "attendees":["vaish", "sai"]
-        },
-
-        {
-            "date": "2020-08-12",
-            "title" : "L&D Meeting",
-            "from" : "08:00",
-            "to":"09:00",
-            "description": "standup",
-            "attendees":["vaish", "sai"]
-            }
-    ],
-
-    "users" : ["vaishnavi","sai","Aman","Vasudevan","Chandra"]
+{
+  "events": [
+    {
+      "title": "milestone stand uppppp",
+      "from": "07:00",
+      "to": "09:00",
+      "description": "standup",
+      "date": "2020-08-12",
+      "id": 1,
+      "attendees": [
+        "vaish",
+        "sai"
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2020-08-12",
+      "title": "L&D Meeting",
+      "from": "08:00",
+      "to": "09:00",
+      "description": "standup",
+      "attendees": [
+        "vaish",
+        "sai"
+      ]
+    },
+    {
+      "title": "c",
+      "from": "13:34",
+      "to": "14:34",
+      "description": "ddddddddddddd",
+      "date": "2020-08-21",
+      "attendees": [
+        "Chandra"
+      ],
+      "id": 3
+    },
+    {
+      "title": "vignesh bday",
+      "from": "13:46",
+      "to": "14:46",
+      "description": "celebrationsssss",
+      "date": "2020-08-20",
+      "attendees": [
+        "vaishnavi"
+      ],
+      "id": 4
+    },
+    {
+      "title": "JS Traning Evaluation of Vaishnavi",
+      "from": "14:15",
+      "to": "16:15",
+      "description": "1.Topics discussion\n2.FeedBack",
+      "date": "2020-08-07",
+      "id": 5,
+      "attendees": [
+        "Vasudevan",
+        "Vaishnavi",
+        "Aman"
+      ]
+    },
+    {
+      "title": "faf",
+      "from": "20:27",
+      "to": "",
+      "description": "lll",
+      "date": "2020-08-13",
+      "id": 6,
+      "attendees": [
+        "aaaaaaaa"
+      ]
+    },
+    {
+      "title": "faf",
+      "from": "12:14",
+      "to": "13:14",
+      "description": "ssssssssss",
+      "date": "2020-08-10",
+      "attendees": [],
+      "id": 7
+    },
+    {
+      "title": "faf",
+      "from": "",
+      "to": "",
+      "description": "a",
+      "date": "2020-09-03",
+      "attendees": [],
+      "id": 8
+    },
+    {
+      "title": "g",
+      "from": "",
+      "to": "",
+      "description": "kkkkkkkk",
+      "date": "2020-10-02",
+      "attendees": [],
+      "id": 9
+    },
+    {
+      "title": "sdfsdf",
+      "from": "13:21",
+      "to": "15:23",
+      "description": "sssssssssssssss",
+      "date": "2020-10-02",
+      "attendees": [],
+      "id": 10
+    },
+    {
+      "title": "aaaaa",
+      "from": "",
+      "to": "",
+      "description": "aaaaaaaaa",
+      "date": "2020-08-01",
+      "attendees": [],
+      "id": 11
+    },
+    {
+      "title": "faf",
+      "from": "",
+      "to": "",
+      "description": "x",
+      "date": "2020-08-03",
+      "id": 12,
+      "attendees": []
+    },
+    {
+      "title": "a",
+      "from": "",
+      "to": "",
+      "description": "a",
+      "date": "2020-08-01",
+      "attendees": [],
+      "id": 13
+    },
+    {
+      "title": "faf",
+      "from": "",
+      "to": "",
+      "description": "aaa",
+      "date": "2020-08-01",
+      "attendees": [],
+      "id": 14
+    }
+  ],
+  "users": [
+    "vaishnavi",
+    "sai",
+    "Aman",
+    "Vasudevan",
+    "Chandra"
+  ]
 }
